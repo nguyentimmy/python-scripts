@@ -1,9 +1,8 @@
 import socket # Import the socket module to allow connections to other hosts and ports 
 
-target = input ('Enter Target IP: ')
-
 def portscan(port): # Created a function to define the port scanner
  try:
+    target = input ('Enter Target IP: ')
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # Created a sock connection on IPV4 using TCP
     sock.connect((target, port)) # Using my localhost as a target 
     return True # Returns true if the statement is valid 
